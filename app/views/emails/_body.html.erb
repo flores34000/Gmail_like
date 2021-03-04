@@ -1,9 +1,26 @@
+
+
+
+
+
+
+
 <h3>Object:</h3>
 <p><%= email.object %></p>
 <h3>Body:</h3>
 <p><%= email.body %><p>
 
-<button class="btn btn-danger">Supprimer</button>
-<button class="btn btn-light" >Non lu</button>
+<div>
+ <%= button_to "suprimer", email_path(email.id),  method: :delete, class: "btn btn-danger", remote: true%>
+ </div>
+ <br>
+ <div>
+ <%= button_to "Non lu", email_path(email.id),  method: :delete, class: "btn btn-light"%>
+</div>
+
+
+
+
+
 
 
